@@ -6,7 +6,7 @@
 
 #include "sqlite3.h"
 
-#ifndef SQLC_KEEP_ANDROID_LOG
+#ifdef SQLC_KEEP_ANDROID_LOG
 // ref: http://www.ibm.com/developerworks/opensource/tutorials/os-androidndk/index.html
 #define MYLOG(...) __android_log_print(ANDROID_LOG_VERBOSE, "sqlc", __VA_ARGS__)
 #else
